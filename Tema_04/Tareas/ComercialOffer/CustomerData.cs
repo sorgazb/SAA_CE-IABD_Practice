@@ -13,7 +13,7 @@ public class CustomerData
     [LoadColumn(3)]
     public float WebVisits { get; set; }
     [LoadColumn(4)]
-    public bool SubcribedNewsletter { get; set; }
+    public bool SubscribedNewsletter { get; set; }
     [LoadColumn(5)]
     public string Region { get; set; } = string.Empty;
     [LoadColumn(6)]

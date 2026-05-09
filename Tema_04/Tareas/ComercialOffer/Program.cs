@@ -23,8 +23,8 @@ var testData = split.TestSet;
 
 // 3. Pipeline común de preprocesamiento
 var preprocessingPipelineCommon = mlContext.Transforms.Categorical.OneHotEncoding("RegionEncoded", "Region")
-.Append(mlContext.Transforms.Conversion.ConvertType("SubcribedNewsletterFloat", "SubcribedNewsletter", Microsoft.ML.Data.DataKind.Single))
-.Append(mlContext.Transforms.Concatenate("Features", "Age", "Income", "PreviousPurchases", "WebVisits", "SubcribedNewsletterFloat", "RegionEncoded"));
+.Append(mlContext.Transforms.Conversion.ConvertType("SubscribedNewsletterFloat", "SubscribedNewsletter", Microsoft.ML.Data.DataKind.Single))
+.Append(mlContext.Transforms.Concatenate("Features", "Age", "Income", "PreviousPurchases", "WebVisits", "SubscribedNewsletterFloat", "RegionEncoded"));
 
 // 4. Modelo 1: FastForest (bagging)
 var fastForestOptions = new FastForestBinaryTrainer.Options
